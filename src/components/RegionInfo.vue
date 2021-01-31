@@ -1,5 +1,5 @@
 <template>
-  <div class="region-info-wrapper">
+  <div v-if="regionInfo.name !== ''" class="region-info-wrapper">
     <header @click="showDetails" class="region-info__header">
       <span>{{ regionInfo.name }}</span>
       <span>{{ regionInfo.main.temp | tempConverter }}</span>
@@ -76,6 +76,7 @@ export default {
     background: #8ba590;
     color: #fff;
     border-radius: 2px;
+    cursor: pointer;
   }
 
   &__details {

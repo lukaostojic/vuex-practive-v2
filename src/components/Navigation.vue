@@ -1,10 +1,10 @@
 <template>
   <nav class="navigation">
-    <div>
-      <!-- <router-link to="/">Map</router-link>
+    <!-- <div> -->
+    <!-- <router-link to="/">Map</router-link>
       <router-link to="/search-region">Search</router-link> -->
-      <i class="fas fa-cloud-sun-rain"></i>
-    </div>
+    <i class="fas fa-cloud-sun-rain"></i>
+    <!-- </div> -->
     <form @submit.prevent="submit" class="navigation__search">
       <input type="text" v-model="inputValue" placeholder="Search..." />
       <button>Search</button>

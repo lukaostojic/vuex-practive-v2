@@ -16,13 +16,13 @@ export default new Vuex.Store({
   },
   getters: {},
   actions: {
-    async sendCoordinates({ commit }, coord) {
+    async sendCoordinates({ commit }, coord = {}) {
       const resp = await axios.post(
         `${apiConfig.apiUrl}lat=${coord.y}&lon=${coord.x}&appid=${apiConfig.apiKey}`
       );
       commit("getRegionInfo", resp.data);
     },
-    async sendInputValue({ commit }, val) {
+    async sendInputValue({ commit }, val = "") {
       const resp = await axios.post(
         `${apiConfig.apiUrl}q=${val}&appid=${apiConfig.apiKey}`
       );

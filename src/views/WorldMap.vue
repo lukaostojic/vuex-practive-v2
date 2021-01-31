@@ -7,16 +7,19 @@
     <div class="world-map__region-info">
       <region-info :isWorldMap="true" :regionInfo="regionInfo"></region-info>
     </div>
+    <error-message :regionInfo="regionInfo"></error-message>
   </main>
 </template>
 
 <script>
 import { mapActions, mapState } from "vuex";
 import RegionInfo from "../components/RegionInfo";
+import ErrorMessage from "../components/ErrorMessage";
 
 export default {
   components: {
     RegionInfo,
+    ErrorMessage,
   },
 
   data() {
@@ -76,13 +79,10 @@ export default {
   }
 
   &__region-info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: absolute;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
+    top: 0;
+    left: 15px;
+    min-width: 200px;
   }
 }
 </style>
