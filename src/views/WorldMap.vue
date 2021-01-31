@@ -4,7 +4,9 @@
       <img src="../assets/world.svg" alt="" />
       <span id="mapCenter"></span>
     </div>
-    <region-info :regionInfo="regionInfo"></region-info>
+    <div class="world-map__region-info">
+      <region-info :isWorldMap="true" :regionInfo="regionInfo"></region-info>
+    </div>
   </main>
 </template>
 
@@ -71,6 +73,16 @@ export default {
       left: 50%;
       top: 50%;
     }
+  }
+
+  &__region-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
   }
 }
 </style>

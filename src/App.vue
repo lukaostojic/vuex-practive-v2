@@ -31,5 +31,6 @@ export default {
 .main-wrapper {
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
 }
 </style>

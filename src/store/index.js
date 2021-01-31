@@ -27,13 +27,13 @@ export default new Vuex.Store({
         `${apiConfig.apiUrl}q=${val}&appid=${apiConfig.apiKey}`
       );
       commit("getRegionInfo", resp.data);
-      console.log(resp.data);
     },
   },
   mutations: {
     getRegionInfo(state, info = {}) {
       state.regionInfo = info;
       state.history.unshift(info);
+      console.log(info);
     },
   },
 });

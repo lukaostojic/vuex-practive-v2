@@ -7,6 +7,7 @@
         v-for="(regionInfo, index) in history"
         :key="index"
         :regionInfo="regionInfo"
+        :isWorldMap="false"
       ></region-info>
     </ul>
   </aside>
@@ -37,6 +38,7 @@ export default {
   height: calc(100vh - 60px);
   padding: 15px;
   border-left: 2px solid #f2f5fd;
+  overflow-y: auto;
 
   h4 {
     padding-bottom: 15px;
